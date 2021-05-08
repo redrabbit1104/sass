@@ -1,0 +1,128 @@
+@mixin leftArrowBotton {
+  &__prev {
+    position: absolute;
+    top: 8px;
+    right: 110px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      transition-duration: 0.2s;
+      transform: translateX(-10px);
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 40%;
+      left: 10px;
+      margin-top: -2.5px;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      transform: rotate(225deg);
+    }
+  }
+}
+
+@mixin rightArrowBotton {
+  &__next {
+    position: absolute;
+    top: 8px;
+    left: 110px;
+    cursor: pointer;
+    color: lightgray;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      transition-duration: 0.2s;
+      transform: translateX(10px);
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 40%;
+      right: 10px;
+      margin-top: -2.5px;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.arrow_buttons {
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+  border: 1px red solid;
+  position: relative;
+
+  @include leftArrowBotton;
+  @include rightArrowBotton;
+}
+
+// .arrow_buttons {
+//   box-sizing: border-box;
+//   width: 200px;
+//   height: 50px;
+//   border: 1px red solid;
+//   position: relative;
+
+//   &__prev {
+//     position: absolute;
+//     top: 8px;
+//     right: 110px;
+//     cursor: pointer;
+//     width: 30px;
+//     height: 30px;
+//     &:hover {
+//       transition-duration: 0.2s;
+//       transform: translateX(-10px);
+//     }
+//     &::before {
+//       content: "";
+//       display: block;
+//       width: 15px;
+//       height: 15px;
+//       position: absolute;
+//       top: 40%;
+//       left: 10px;
+//       margin-top: -2.5px;
+//       border-top: 1px solid #ccc;
+//       border-right: 1px solid #ccc;
+//       transform: rotate(225deg);
+//     }
+//   }
+
+//   &__next {
+//     position: absolute;
+//     top: 8px;
+//     left: 110px;
+//     cursor: pointer;
+//     color: lightgray;
+//     width: 30px;
+//     height: 30px;
+//     &:hover {
+//       transition-duration: 0.2s;
+//       transform: translateX(10px);
+//     }
+//     &::after {
+//       content: "";
+//       display: block;
+//       width: 15px;
+//       height: 15px;
+//       position: absolute;
+//       top: 40%;
+//       right: 10px;
+//       margin-top: -2.5px;
+//       border-top: 1px solid #ccc;
+//       border-right: 1px solid #ccc;
+//       transform: rotate(45deg);
+//     }
+//   }
+// }
