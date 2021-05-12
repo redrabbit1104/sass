@@ -1,0 +1,17 @@
+body {
+  display: flex;
+}
+
+.none {
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  background-color: orange;
+}
+
+.target {
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  filter: url("screenshot");
+}
